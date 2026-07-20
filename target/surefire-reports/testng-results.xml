@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-07-20T18:14:34 IST" name="Surefire suite" finished-at="2026-07-20T18:14:55 IST" duration-ms="20685">
+    <groups>
+    </groups>
+    <test started-at="2026-07-20T18:14:34 IST" name="Surefire test" finished-at="2026-07-20T18:14:55 IST" duration-ms="20685">
+      <class name="tests.SmokeTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SmokeTests@258e2e41]" started-at="2026-07-20T18:14:34 IST" name="setUp" finished-at="2026-07-20T18:14:51 IST" duration-ms="16788" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="homePageLoads_andModalOpens()[pri:0, instance:tests.SmokeTests@258e2e41]" started-at="2026-07-20T18:14:51 IST" name="homePageLoads_andModalOpens" finished-at="2026-07-20T18:14:52 IST" duration-ms="874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageLoads_andModalOpens -->
+        <test-method signature="login_then_dashboard_shows_email()[pri:0, instance:tests.SmokeTests@258e2e41]" started-at="2026-07-20T18:14:52 IST" name="login_then_dashboard_shows_email" finished-at="2026-07-20T18:14:53 IST" duration-ms="993" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_then_dashboard_shows_email -->
+        <test-method signature="products_addToCart_incrementsBadge()[pri:0, instance:tests.SmokeTests@258e2e41]" started-at="2026-07-20T18:14:53 IST" name="products_addToCart_incrementsBadge" finished-at="2026-07-20T18:14:53 IST" duration-ms="491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- products_addToCart_incrementsBadge -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SmokeTests@258e2e41]" started-at="2026-07-20T18:14:53 IST" name="tearDown" finished-at="2026-07-20T18:14:55 IST" duration-ms="1461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.SmokeTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
