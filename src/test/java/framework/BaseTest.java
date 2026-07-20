@@ -1,4 +1,3 @@
-
 package framework;
 
 import org.openqa.selenium.WebDriver;
@@ -8,30 +7,55 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import java.time.Duration;
-// import io.github.bonigarcia.wdm.WebDriverManager; // optional fallback
 
 public class BaseTest {
+
     protected WebDriver driver;
     protected String baseUrl;
 
     @BeforeClass
     public void setUp() {
-        baseUrl = System.getProperty("baseUrl", "https://incredible-phoenix-751bd5.netlify.app/");
-        boolean headless = Boolean.parseBoolean(System.getProperty("headless", "true"));
+
+        baseUrl = System.getProperty(
+                "baseUrl",
+                "https://incredible-phoenix-751bd5.netlify.app/"
+        );
+
+        boolean headless = Boolean.parseBoolean(
+                System.getProperty("headless", "true")
+        );
 
         ChromeOptions options = new ChromeOptions();
-        if (headless) options.addArguments("--headless=new");
-        options.addArguments("--window-size=1920,1080");
 
-        // Selenium 4 auto-resolves ChromeDriver via Selenium Manager
-        // If you face driver issues, uncomment:
-        // WebDriverManager.chromedriver().setup();
+        if (headless) {
+            options.addArguments("--headless=new");
+        }
+
+        options.addArguments(
+                "--window-size=1920,1080",
+                "--remote-allow-origins=*",
+                "--disable-gpu",
+                "--no-sandbox"
+        );
+
+        // IMPORTANT: assign to class variable
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+        driver.manage().timeouts()
+                .implicitlyWait(Duration.ofSeconds(5));
+
+        driver.manage().window().maximize();
+
+        System.out.println("Browser started successfully");
     }
+
 
     @AfterClass
     public void tearDown() {
-        if (driver != null) driver.quit();
+
+        if (driver != null) {
+            driver.quit();
+            System.out.println("Browser closed");
+        }
     }
 }
