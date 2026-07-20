@@ -45,5 +45,3 @@ jobs:
           path: |
             target/surefire-reports
             test-output
-
-```
