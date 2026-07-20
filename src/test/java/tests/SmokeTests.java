@@ -41,5 +41,6 @@ public class SmokeTests extends BaseTest {
         driver.get(baseUrl + "/dashboard.html");
         String email = driver.findElement(By.cssSelector("[data-testid='user-email']")).getText();
         Assert.assertTrue(email.contains("sunder@example.com"));
+        System.out.println("Test");
     }
 }
